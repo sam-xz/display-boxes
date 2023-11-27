@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get the list of connected displays
+##displays=$(xrandr | grep " connected" | awk '{print $1}')
+
+# Loop through each display and set the resolution to 1920x1080
+#for display in $displays; do
+    #xrandr --output $display --mode 1920x1080
+#done
+
+su displays
+xrandr --output HDMI-2 --mode 1920x1080
