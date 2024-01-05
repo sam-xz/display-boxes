@@ -1,7 +1,6 @@
-#!bin/bash
-
 #update all silently
-apt-get -o Dpkg::Options::='--force-confold' --force-yes -fuy dist-upgrade
+
+sudo apt-get -o Dpkg::Options::='--force-confold' --force-yes -fuy dist-upgrade
 
 #Dpkg::Options::='--force-confold' :
 #--force-confold: do not modify the current configuration file, 

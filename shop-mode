@@ -1,0 +1,14 @@
+#!/bin/bash
+# Shop mode
+# Samuel Marino 30/Nov/2023
+# Supress all on screen pop ups
+
+# Disable automatic updates
+sudo sed -i 's/APT::Periodic::Update-Package-Lists "1";/APT::Periodic::Update-Package-Lists "0";/g' /etc/apt/apt.conf.d/20auto-upgrades
+sudo sed -i 's/APT::Periodic::Unattended-Upgrade "1";/APT::Periodic::Unattended-Upgrade "0";/g' /etc/apt/apt.conf.d/20auto-upgrades
+
+# Disable update notification
+sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/update-notifier.desktop
+
+# Supress gui notications
+lxqt-config-notificationd
